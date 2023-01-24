@@ -5,9 +5,12 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:ui="clr-namespace:L4D2DevTools.Themes.Controls"
+    x:Name="Window_Main"
     Title="求生之路2 开发者工具箱"
-    Width="700"
-    Height="450"
+    Width="600"
+    Height="400"
+    Closing="Window_Main_Closing"
+    Loaded="Window_Main_Loaded"
     ResizeMode="CanMinimize"
     WindowStartupLocation="CenterScreen"
     mc:Ignorable="d">
@@ -16,48 +19,78 @@
         <Grid.RowDefinitions>
             <RowDefinition />
             <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <!--  ///////////////////  -->
-        <WrapPanel Grid.Row="0">
-            <ui:ButtonIcon
-                x:Name="Button_RunGCFScape"
-                AllowDrop="True"
-                Click="Button_RunGCFScape_Click"
-                Content="GCFScape"
-                Drop="Button_RunGCFScape_Drop"
-                Icon="/Images/GCFScape.png" />
-            <ui:ButtonIcon
-                x:Name="Button_RunVTFEdit"
-                AllowDrop="True"
-                Click="Button_RunVTFEdit_Click"
-                Content="VTFEdit"
-                Drop="Button_RunVTFEdit_Drop"
-                Icon="/Images/VTFEdit.png" />
-            <ui:ButtonIcon
-                x:Name="Button_RunBSPSource"
-                AllowDrop="True"
-                Click="Button_RunBSPSource_Click"
-                Content="BSPSource"
-                Drop="Button_RunBSPSource_Drop"
-                Icon="/Images/BSPSource.png" />
-        </WrapPanel>
-        <!--  ///////////////////  -->
-        <Border
+        <!--  ////////////////////////  -->
+        <StackPanel>
+            <WrapPanel Grid.Row="0">
+                <ui:ButtonIcon
+                    x:Name="Button_RunGCFScape"
+                    AllowDrop="True"
+                    Click="Button_RunGCFScape_Click"
+                    Content="GCFScape"
+                    Drop="Button_RunGCFScape_Drop"
+                    Icon="/Images/GCFScape.png" />
+                <ui:ButtonIcon
+                    x:Name="Button_RunVTFEdit"
+                    AllowDrop="True"
+                    Click="Button_RunVTFEdit_Click"
+                    Content="VTFEdit"
+                    Drop="Button_RunVTFEdit_Drop"
+                    Icon="/Images/VTFEdit.png" />
+                <ui:ButtonIcon
+                    x:Name="Button_RunBSPSource"
+                    AllowDrop="True"
+                    Click="Button_RunBSPSource_Click"
+                    Content="BSPSource"
+                    Drop="Button_RunBSPSource_Drop"
+                    Icon="/Images/BSPSource.png" />
+                <ui:ButtonIcon
+                    x:Name="Button_VPKUnpack"
+                    AllowDrop="True"
+                    Click="Button_VPKUnpack_Click"
+                    Content="VPK解包"
+                    Drop="Button_VPKUnpack_Drop"
+                    Icon="/Images/VPK.png" />
+            </WrapPanel>
+            <!--  ///////////////////  -->
+            <WrapPanel Grid.Row="1">
+                <ui:ButtonIcon
+                    x:Name="Button_SetRegionEnUS"
+                    Click="Button_SetRegionEnUS_Click"
+                    Content="设置区域格式"
+                    Icon="/Images/Regional.png" />
+                <ui:ButtonIcon
+                    x:Name="Button_L4D2Dir"
+                    Click="Button_L4D2Dir_Click"
+                    Content="求生之路2目录"
+                    Icon="/Images/L4D2Dir.png" />
+                <ui:ButtonIcon
+                    x:Name="Button_L4D2Dir_Addons"
+                    Click="Button_L4D2Dir_Addons_Click"
+                    Content="Addons目录"
+                    Icon="/Images/Addons.png" />
+                <ui:ButtonIcon
+                    x:Name="Button_L4D2Dir_Maps"
+                    Click="Button_L4D2Dir_Maps_Click"
+                    Content="Maps目录"
+                    Icon="/Images/Maps.png" />
+            </WrapPanel>
+        </StackPanel>
+        <!--  ////////////////////////  -->
+        <StackPanel
             Grid.Row="1"
-            Height="1"
-            Margin="0,10,0,10"
-            Background="#C2C3C9"
-            SnapsToDevicePixels="True" />
-        <!--  ///////////////////  -->
-        <WrapPanel Grid.Row="2">
-            <ui:LabelIcon
-                x:Name="Label_VPKUnpack"
-                AllowDrop="True"
-                Content="VPK解包"
-                Drop="Label_VPKUnpack_Drop"
-                Icon="/Images/VPK.png" />
-        </WrapPanel>
+            HorizontalAlignment="Right"
+            Orientation="Horizontal">
+            <TextBlock Margin="0,0,5,0">
+                <Hyperlink NavigateUri="https://github.com/CrazyZhang666/L4D2DevTools" RequestNavigate="Hyperlink_RequestNavigate">
+                    GitHub
+                </Hyperlink>
+            </TextBlock>
+            <CheckBox
+                x:Name="CheckBox_IsTopMost"
+                Click="CheckBox_IsTopMost_Click"
+                Content="窗口置顶" />
+        </StackPanel>
     </Grid>
 
 </Window>

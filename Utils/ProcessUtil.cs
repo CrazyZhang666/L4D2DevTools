@@ -43,17 +43,13 @@ namespace L4D2DevTools.Utils
         /// <summary>
         /// 打开指定程序并附带参数
         /// </summary>
-        /// <param name="execPath"></param>
-        /// <param name="arguments"></param>
-        public static void OpenExecWithArgs(string execPath, string arguments = "")
+        /// <param name="filePath"></param>
+        /// <param name="args"></param>
+        public static void OpenExecWithArgs(string filePath, string args = "")
         {
             try
             {
-                var process = new Process();
-                process.StartInfo.FileName = execPath;
-                process.StartInfo.Arguments = arguments;
-                process.StartInfo.UseShellExecute = false;
-                process.Start();
+                Process.Start(filePath, args);
             }
             catch (Exception ex)
             {
