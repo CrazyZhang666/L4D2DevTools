@@ -7,13 +7,13 @@ using System.Windows;
 // 有关程序集的一般信息由以下
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("L4D2DevTools")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("求生之路2 开发者工具箱")]
+[assembly: AssemblyDescription("求生之路2 开发者工具箱")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("L4D2DevTools")]
+[assembly: AssemblyCompany("CrazyZhang")]
+[assembly: AssemblyProduct("求生之路2 开发者工具箱")]
 [assembly: AssemblyCopyright("Copyright ©  2023")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyTrademark("求生之路2 开发者工具箱")]
 [assembly: AssemblyCulture("")]
 
 // 将 ComVisible 设置为 false 会使此程序集中的类型

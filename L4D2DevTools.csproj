@@ -62,9 +62,13 @@
   <PropertyGroup>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Assets\favicon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.IO.Compression.FileSystem" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -89,8 +93,10 @@
       <DependentUpon>InitWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Themes\Controls\ButtonIcon.cs" />
+    <Compile Include="Utils\FileUtil.cs" />
     <Compile Include="Utils\MsgBoxUtil.cs" />
     <Compile Include="Utils\ProcessUtil.cs" />
+    <Compile Include="Win32.cs" />
     <Page Include="InitWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -131,35 +137,40 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="app.config" />
+    <EmbeddedResource Include="Files\AppData.zip" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\BSPSource.png" />
+    <Resource Include="Assets\Images\BSPSource.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\GCFScape.png" />
-    <Resource Include="Images\VTFEdit.png" />
+    <Resource Include="Assets\Images\GCFScape.png" />
+    <Resource Include="Assets\Images\VTFEdit.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\VPK.png" />
+    <Resource Include="Assets\Images\VPK.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\L4D2.png" />
+    <Resource Include="Assets\Images\Maps.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\Regional.png" />
+    <Resource Include="Assets\Images\L4D2Dir.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\Maps.png" />
+    <Resource Include="Assets\Images\Addons.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\L4D2Dir.png" />
+    <Resource Include="Assets\Images\RegionEnUS.png" />
+    <Resource Include="Assets\Images\RegionZhCN.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\Addons.png" />
+    <Resource Include="Assets\Images\Hammer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\favicon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

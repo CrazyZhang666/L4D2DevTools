@@ -14,25 +14,10 @@
     WindowStartupLocation="CenterOwner"
     mc:Ignorable="d">
 
-    <Grid Margin="5">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition />
-            <ColumnDefinition Width="Auto" />
-        </Grid.ColumnDefinitions>
-        <!--  ////////////////////////  -->
-        <TextBox
-            x:Name="TextBox_L4D2MainExec"
-            Padding="7"
-            VerticalContentAlignment="Center"
-            IsReadOnly="True" />
-        <!--  ////////////////////////  -->
-        <Button
-            x:Name="Button_SelectL4D2MainExec"
-            Grid.Column="1"
-            Margin="5,0,0,0"
-            Padding="5"
-            Click="Button_SelectL4D2MainExec_Click"
-            Content="选择" />
-    </Grid>
+    <Button
+        x:Name="Button_SelectL4D2MainExec"
+        Margin="5"
+        Click="Button_SelectL4D2MainExec_Click"
+        Content="选择求生之路2主程序路径" />
 
 </Window>

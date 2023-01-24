@@ -6,8 +6,8 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:ui="clr-namespace:L4D2DevTools.Themes.Controls"
     x:Name="Window_Main"
-    Title="求生之路2 开发者工具箱"
-    Width="600"
+    Title="求生之路2 开发者工具箱 BS By CrazyZhang"
+    Width="700"
     Height="400"
     Closing="Window_Main_Closing"
     Loaded="Window_Main_Loaded"
@@ -24,56 +24,68 @@
         <StackPanel>
             <WrapPanel Grid.Row="0">
                 <ui:ButtonIcon
+                    x:Name="Button_VPKUnpack"
+                    AllowDrop="True"
+                    Click="Button_VPKUnpack_Click"
+                    Content="VPK解包"
+                    Drop="Button_VPKUnpack_Drop"
+                    Icon="/Assets/Images/VPK.png" />
+                <ui:ButtonIcon
                     x:Name="Button_RunGCFScape"
                     AllowDrop="True"
                     Click="Button_RunGCFScape_Click"
                     Content="GCFScape"
                     Drop="Button_RunGCFScape_Drop"
-                    Icon="/Images/GCFScape.png" />
+                    Icon="/Assets/Images/GCFScape.png" />
                 <ui:ButtonIcon
                     x:Name="Button_RunVTFEdit"
                     AllowDrop="True"
                     Click="Button_RunVTFEdit_Click"
                     Content="VTFEdit"
                     Drop="Button_RunVTFEdit_Drop"
-                    Icon="/Images/VTFEdit.png" />
+                    Icon="/Assets/Images/VTFEdit.png" />
                 <ui:ButtonIcon
                     x:Name="Button_RunBSPSource"
                     AllowDrop="True"
                     Click="Button_RunBSPSource_Click"
                     Content="BSPSource"
                     Drop="Button_RunBSPSource_Drop"
-                    Icon="/Images/BSPSource.png" />
+                    Icon="/Assets/Images/BSPSource.png" />
                 <ui:ButtonIcon
-                    x:Name="Button_VPKUnpack"
+                    x:Name="Button_RunHammer"
                     AllowDrop="True"
-                    Click="Button_VPKUnpack_Click"
-                    Content="VPK解包"
-                    Drop="Button_VPKUnpack_Drop"
-                    Icon="/Images/VPK.png" />
+                    Click="Button_RunHammer_Click"
+                    Content="Hammer"
+                    Drop="Button_RunHammer_Drop"
+                    Icon="/Assets/Images/Hammer.png" />
             </WrapPanel>
             <!--  ///////////////////  -->
             <WrapPanel Grid.Row="1">
                 <ui:ButtonIcon
                     x:Name="Button_SetRegionEnUS"
                     Click="Button_SetRegionEnUS_Click"
-                    Content="设置区域格式"
-                    Icon="/Images/Regional.png" />
+                    Content="区域格式-英语美国"
+                    Icon="/Assets/Images/RegionEnUS.png" />
+                <ui:ButtonIcon
+                    x:Name="Button_SetRegionZhCN"
+                    Click="Button_SetRegionZhCN_Click"
+                    Content="区域格式-中文中国"
+                    Icon="/Assets/Images/RegionZhCN.png" />
                 <ui:ButtonIcon
                     x:Name="Button_L4D2Dir"
                     Click="Button_L4D2Dir_Click"
                     Content="求生之路2目录"
-                    Icon="/Images/L4D2Dir.png" />
+                    Icon="/Assets/Images/L4D2Dir.png" />
                 <ui:ButtonIcon
                     x:Name="Button_L4D2Dir_Addons"
                     Click="Button_L4D2Dir_Addons_Click"
                     Content="Addons目录"
-                    Icon="/Images/Addons.png" />
+                    Icon="/Assets/Images/Addons.png" />
                 <ui:ButtonIcon
                     x:Name="Button_L4D2Dir_Maps"
                     Click="Button_L4D2Dir_Maps_Click"
                     Content="Maps目录"
-                    Icon="/Images/Maps.png" />
+                    Icon="/Assets/Images/Maps.png" />
             </WrapPanel>
         </StackPanel>
         <!--  ////////////////////////  -->
